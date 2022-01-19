@@ -1,4 +1,4 @@
-# avorion-server - `pod-avorion
+# avorion-server - `pod-avorion`
 
 I don't want to need to manually do this again. Writing it down here. I want to specifically credit the avorion wiki folks for having these details already written down. This is just implementation (and update to current as of Jan 2022) so that I can share with my friends.
 
