@@ -24,3 +24,14 @@ You need the following.
 ...Yeah. I know.
 
 You can do surgery on the `admin.xml` later to add multiple administrators. It'll exist on your local file system!
+
+## Import note about `server.ini`
+
+When your server is initializing, it examines the `Scenario` setting of the `server.ini`. Please note that certain settings are _overwritten_ by the server startup process if their values are not compatible with the `scenario` setting.
+
+Examples:
+
+- If `Scenario` is set to  `0` (creative), `UnlimitedResources` server.ini setting is overwritten to `true`, regardless of the setting.
+- If `Scenario` is `1` (normal), `ResourceAsteroidFactor` or `ResourceWreckageFactor` multipliers are reset to `1`. `RepairAlwaysAllowed` will also be force set to `true`
+- If `Scenario` is `3` (free play), the settings that were reset in mode `1` above will be left alone!
+
