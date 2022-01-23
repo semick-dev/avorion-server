@@ -19,13 +19,13 @@ You need the following.
 - a 64 bit id from [here](https://steamid.io/) that will be the server admin. It defaults to nothing, so. That would be bad.
 - A galaxy name! It defaults to `general_kenobi`.
 
-`docker run -v <where you want your galaxy to save or be loaded from>:/srv/avorion -e GALAXY_NAME="the-melting-pot" -e GALAXY_ADMIN="76561197980019233" -p 27004:27004 -p 27000:27000 -p 27003:27003 -p 27020:27020 -p 27021:27021 -t pod-avorion`
-
-...Yeah. I know.
+```
+/> docker run -v <where you want your galaxy to save or be loaded from>:/srv/avorion -e GALAXY_NAME="the-melting-pot" -e GALAXY_ADMIN="76561197980019233" -p 27004:27004 -p 27000:27000 -p 27003:27003 -p 27020:27020 -p 27021:27021 -t pod-avorion
+```
 
 You can do surgery on the `admin.xml` later to add multiple administrators. It'll exist on your local file system!
 
-## Import note about `server.ini`
+## `server.ini` setting overrides during startup
 
 When your server is initializing, it examines the `Scenario` setting of the `server.ini`. Please note that certain settings are _overwritten_ by the server startup process if their values are not compatible with the `scenario` setting.
 
